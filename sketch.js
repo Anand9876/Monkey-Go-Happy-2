@@ -25,10 +25,12 @@ function setup() {
   
   ground = createSprite(width/2,height,width,2);
   ground.addImage("background",backgroundImage);
+  ground.x=width/2;
   ground.velocityX=-2;
 
   monkey =createSprite(50,height-50,20,50);
   monkey.addAnimation("moving",monkey_running);
+  monkey.collide(ground);
   monkey.scale=0.1;
   
   
@@ -39,8 +41,8 @@ function setup() {
 
 function draw() {
   background(jungleImage);
-   if(jungle.x<50){
-    jungle.x=200;
+   if(ground.x<50){
+   ground.x=ground.width/2;
   }
   if(gameState===PLAY){
    
