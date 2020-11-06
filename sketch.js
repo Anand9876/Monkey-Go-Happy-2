@@ -41,7 +41,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(jungleImage);
    if(jungle.x<50){
     jungle.x=200;
   }
@@ -118,7 +118,7 @@ function draw() {
 
 function food () {
   if(frameCount%80===0){
-    fruit=createSprite(400,165,10,40);
+    fruit=createSprite(width+20,height-300,40,10);
     fruit.velocityX=-5;
     fruit.addImage("moving",fruitImage);
     fruit.scale=0.05;
@@ -128,7 +128,7 @@ function food () {
 } 
   function obstacles(){
   if(frameCount%300===0){
-    obstacle=createSprite(400,325,10,40);
+    obstacle= createSprite(600,height-95,20,30);
     obstacle.collide(ground); 
     obstacle.velocityX=-2;
     obstacle.addImage("moving",obstacleImage);
