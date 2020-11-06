@@ -21,12 +21,10 @@ function preload(){
 function setup() {
   
  createCanvas(windowWidth, windowHeight);
-  jungle= createSprite(200,200,300,10);
-  jungle.velocityX=-2;
-  jungle.addImage("background",backgroundImage);
- jungle.scale=windowWidth;
+ 
   
   ground = createSprite(width/2,height,width,2);
+  ground.addImage("background",backgroundImage);
   ground.velocityX=-2;
   ground.visible=false;
   
