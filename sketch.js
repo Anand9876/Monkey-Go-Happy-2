@@ -24,7 +24,7 @@ function setup() {
   jungle= createSprite(200,200,300,10);
   jungle.velocityX=-2;
   jungle.addImage("background",jungleImage);
-  //jungle.scale=0.7;
+ jungle.scale=2;
   
   ground = createSprite(width/2,height,width,2);
   ground.velocityX=-2;
