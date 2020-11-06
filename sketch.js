@@ -86,7 +86,7 @@ function draw() {
   
   }
   if(gameState===END){
-    jungle.velocityX=0;
+    ground.velocityX=0;
     obstacle.velocityX=0; 
    monkey.pause();
     monkey.scale=0.1;
@@ -141,7 +141,7 @@ function reset(){
   score=0;
   survivaltime=0;
   monkey.play();
-  jungle.velocityX=-2;
+  ground.velocityX=-2;
   FoodGroup.destroyEach();
   obstacleGroup.destroyEach();
 }
