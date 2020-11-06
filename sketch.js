@@ -9,7 +9,7 @@ var score;
 function preload(){
   
   jungleImage=loadImage("sprite_0.png");
-  
+  backgroundImage=loadImage("sprite_0.png");
   monkey_running =
   loadAnimation("Monkey_01.png","Monkey_02.png","Monkey_03.png","Monkey_04.png","Monkey_05.png","Monkey_06.png","Monkey_07.png","Monkey_08.png","Monkey_09.png","Monkey_10.png ")
   
@@ -23,7 +23,7 @@ function setup() {
  createCanvas(windowWidth, windowHeight);
   jungle= createSprite(200,200,300,10);
   jungle.velocityX=-2;
-  jungle.addImage("background",jungleImage);
+  jungle.addImage("background",backgroundImage);
  jungle.scale=windowWidth;
   
   ground = createSprite(width/2,height,width,2);
