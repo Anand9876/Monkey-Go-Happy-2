@@ -30,7 +30,7 @@ function setup() {
   ground.velocityX=-2;
   ground.visible=false;
   
-  monkey =createSprite(50,height-70,20,50);
+  monkey =createSprite(50,height-50,20,50);
   monkey.addAnimation("moving",monkey_running);
   monkey.scale=0.1;
   
