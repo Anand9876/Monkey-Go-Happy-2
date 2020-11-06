@@ -76,7 +76,7 @@ function draw() {
             monkey.scale=0.18
           }
         }
-  
+   
   if(monkey.isTouching(FoodGroup)){
       FoodGroup.destroyEach();
      score=score+2;
