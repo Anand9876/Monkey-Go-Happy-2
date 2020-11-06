@@ -20,17 +20,17 @@ function preload(){
  }
 function setup() {
   
-  createCanvas(400, 400);
+ createCanvas(windowWidth, windowHeight);
   jungle= createSprite(200,200,300,10);
   jungle.velocityX=-2;
   jungle.addImage("background",jungleImage);
   jungle.scale=0.7;
   
-  ground = createSprite(200,350,900,10);
+  ground = createSprite(width/2,height,width,2);
   ground.velocityX=-2;
   ground.visible=false;
   
-  monkey = createSprite(80,250,20,20);
+  monkey =createSprite(50,height-70,20,50);
   monkey.addAnimation("moving",monkey_running);
   monkey.scale=0.1;
   
@@ -53,6 +53,11 @@ function draw() {
   if(keyDown("space")&&monkey.y>=150){
     monkey.velocityY=-12;
   }
+    if(touches.length > 0 && monkey.y  >= height-120) {
+      
+      monkey.velocityY = -12;
+       touches = [];
+    }
   monkey.velocityY=monkey.velocityY+0.8;
   monkey.collide(ground);
   food();
@@ -91,6 +96,10 @@ function draw() {
     if(keyDown("R")){
     reset();
   }
+    if(touches.length>0) {      
+      reset();
+      touches = []
+    }
   }
   drawSprites();
   stroke("black");
@@ -101,6 +110,8 @@ function draw() {
     textSize(20);
     text("GAME OVER",140,180);
     text("Press r to restart",125,200);
+    text("OR",180,220);
+    text("Tap on screen to restart",100,240);
   }
   
 }
